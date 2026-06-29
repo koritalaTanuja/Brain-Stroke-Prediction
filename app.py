@@ -3,9 +3,9 @@ import pickle
 import numpy as np
 
 # Load the trained model
-with open("stroke_prediction_model.pkl", "rb") as file:
-    model = pickle.load(file)
+import joblib
 
+model = joblib.load("stroke_prediction_model.pkl")
 st.set_page_config(page_title="Stroke Prediction System", page_icon="🩺")
 
 st.title("🩺 Stroke Prediction System")
